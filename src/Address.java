@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Address {
 
     public int number = -1;
@@ -8,7 +10,26 @@ public class Address {
     public String country = "";
 
     public void requestAddress() {
-
+        Scanner scan = new Scanner(System.in);
+        while(true) {
+            try {
+                System.out.print("Enter Country: ");
+                setCountry(scan.nextLine().trim());
+                System.out.print("Enter Zip Code: ");
+                setZipCode(scan.nextLine().trim());
+                System.out.print("Enter State/Province: ");
+                setState(scan.nextLine().trim());
+                System.out.print("Enter City/Town/Locality: ");
+                setCity(scan.nextLine().trim());
+                System.out.print("Enter Street: ");
+                setStreet(scan.nextLine().trim());
+                System.out.print("Enter House/Building Number: ");
+                setNumber(scan.nextInt());
+                break;
+            } catch (Exception e) {
+                System.out.println("Error, not a valid input. Please try again!");
+            }
+        }
     }
 
     public int getNumber() {
