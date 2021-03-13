@@ -8,7 +8,8 @@ public class Tz {
 
     public static void main(String[] args) {
         Tz tester = new Tz();
-        System.out.println(tester.tzExists(12));
+        tester.tzExists(12);
+        System.out.println(tester.getMilitaryDesignation());
     }
 
     public boolean tzExists(int toBeChecked) {
