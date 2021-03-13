@@ -2,6 +2,10 @@ import java.util.*;
 
 public class Tz {
 
+    public String name = "Greenwich Mean Time";
+    public String abbreviation = "GMT";
+    public String militaryDesignation = "Zulu";
+
     public static void main(String[] args) {
         Tz tester = new Tz();
         System.out.println(tester.tzExists(12));
@@ -10,58 +14,152 @@ public class Tz {
     public boolean tzExists(int toBeChecked) {
         switch (toBeChecked) {
             case -12:
-                return false;
+                setName("International Date Line West");
+                setAbbreviation("IDLW");
+                setMilitaryDesignation("Yankee");
+                return true;
             case -11:
-                return false;
+                setName("Nome Time");
+                setAbbreviation("NT");
+                setMilitaryDesignation("X-ray");
+                return true;
             case -10:
-                return false;
+                setName("Hawaii Standard Time");
+                setAbbreviation("HST");
+                setMilitaryDesignation("Whiskey");
+                return true;
             case -9:
-                return false;
+                setName("Alaska Standard Time");
+                setAbbreviation("AKST");
+                setMilitaryDesignation("Victor");
+                return true;
             case -8:
-                return false;
+                setName("Pacific Standard Time");
+                setAbbreviation("PST");
+                setMilitaryDesignation("Uniform");
+                return true;
             case -7:
-                return false;
+                setName("Mountain Standard Time");
+                setAbbreviation("MST");
+                setMilitaryDesignation("Tango");
+                return true;
             case -6:
-                return false;
+                setName("Central Standard Time");
+                setAbbreviation("CST");
+                setMilitaryDesignation("Sierra");
+                return true;
             case -5:
-                return false;
+                setName("Eastern Standard Time");
+                setAbbreviation("EST");
+                setMilitaryDesignation("Romeo");
+                return true;
             case -4:
-                return false;
+                setName("Atlantic Standard Time");
+                setAbbreviation("AST");
+                setMilitaryDesignation("Quebec");
+                return true;
             case -3:
-                return false;
+                setName("Argentina Time");
+                setAbbreviation("ART");
+                setMilitaryDesignation("Papa");
+                return true;
             case -2:
-                return false;
+                setName("Azores Time");
+                setAbbreviation("AT");
+                setMilitaryDesignation("Oscar");
+                return true;
             case -1:
-                return false;
+                setName("West Africa Time");
+                setAbbreviation("WAT");
+                setMilitaryDesignation("November");
+                return true;
             case 0:
-                return false;
+                return true;
             case 1:
+                setName("Central European Time");
+                setAbbreviation("CET");
+                setMilitaryDesignation("Alpha");
                 return true;
             case 2:
+                setName("Eastern European Time");
+                setAbbreviation("EET");
+                setMilitaryDesignation("Bravo");
                 return true;
             case 3:
+                setName("Moscow Time");
+                setAbbreviation("MSK");
+                setMilitaryDesignation("Charlie");
                 return true;
             case 4:
+                setName("Armenia Time");
+                setAbbreviation("AMT");
+                setMilitaryDesignation("Delta");
                 return true;
             case 5:
+                setName("Pakistan Standard Time");
+                setAbbreviation("PKT");
+                setMilitaryDesignation("Echo");
                 return true;
             case 6:
+                setName("Omsk Time");
+                setAbbreviation("OMSK");
+                setMilitaryDesignation("Foxtrot");
                 return true;
             case 7:
+                setName("Kranoyask Time");
+                setAbbreviation("KRAT");
+                setMilitaryDesignation("Golf");
                 return true;
             case 8:
+                setName("China Standard Time");
+                setAbbreviation("CSTA");
+                setMilitaryDesignation("Hotel");
                 return true;
             case 9:
+                setName("Japan Standard Time");
+                setAbbreviation("JST");
+                setMilitaryDesignation("India");
                 return true;
             case 10:
+                setName("Eastern Australia Standard Time");
+                setAbbreviation("AEST");
+                setMilitaryDesignation("Kilo");
                 return true;
             case 11:
+                setName("Sakhalin Time");
+                setAbbreviation("SAKT");
+                setMilitaryDesignation("Lima");
                 return true;
             case 12:
+                setName("New Zealand Standard Time");
+                setAbbreviation("NZST");
+                setMilitaryDesignation("Mike");
                 return true;
         }
-        System.out.println("here");
         return false;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
+    }
+
+    public String getMilitaryDesignation() {
+        return militaryDesignation;
+    }
+
+    public void setMilitaryDesignation(String militaryDesignation) {
+        this.militaryDesignation = militaryDesignation;
+    }
 }
