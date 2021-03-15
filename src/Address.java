@@ -2,12 +2,25 @@ import java.util.Scanner;
 
 public class Address {
 
-    public int number = -1;
-    public String street = "";
-    public String city = "";
-    public String state = "";
-    public String zipCode = "";
-    public String country = "";
+    private int number = -1;
+    private String street = "";
+    private String city = "";
+    private String state = "";
+    private String zipCode = "";
+    private String country = "";
+
+    public Address() {
+
+    }
+
+    public Address(int number, String street, String city, String state, String zipCode, String country) {
+        this.number = number;
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+        this.country = country;
+    }
 
     public void requestAddress() {
         Scanner scan = new Scanner(System.in);
@@ -30,6 +43,7 @@ public class Address {
                 System.out.println("Error, not a valid input. Please try again!");
             }
         }
+        scan.close();
     }
 
     public int getNumber() {

@@ -1,16 +1,8 @@
-import java.util.*;
-
 public class Tz {
 
-    public String name = "Greenwich Mean Time";
-    public String abbreviation = "GMT";
-    public String militaryDesignation = "Zulu";
-
-    public static void main(String[] args) {
-        Tz tester = new Tz();
-        tester.tzExists(12);
-        System.out.println(tester.getMilitaryDesignation());
-    }
+    private String name = "Greenwich Mean Time";
+    private String abbreviation = "GMT";
+    private String militaryDesignation = "Zulu";
 
     public boolean tzExists(int toBeChecked) {
         switch (toBeChecked) {
